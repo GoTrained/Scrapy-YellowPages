@@ -33,9 +33,9 @@ After that, we loop on this list to extract the details of each company. Note th
 
 ```
 for company in companies:
-			name = company.xpath('h3/a/span[@itemprop="name"]/text()').extract_first()
-			phone = company.xpath('div/div[@class="phones phone primary"]/text()').extract_first()
-			website = company.xpath('div/div[@class="links"]/a/@href').extract_first()
+     name = company.xpath('h3/a/span[@itemprop="name"]/text()').extract_first()
+     phone = company.xpath('div/div[@class="phones phone primary"]/text()').extract_first()
+     website = company.xpath('div/div[@class="links"]/a/@href').extract_first()
 ```
 
 Finally, we *yield* these variables in the same for loop. It is a dictionary. If you are saving the output to CSV, it will appear as columns.
